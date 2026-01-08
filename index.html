@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>🐐</title>
 
   <!-- Vue 3 -->
@@ -55,6 +55,7 @@
         function checkCode() {
           if (code.value === '42') {
             success.value = true;
+            message.value = false;
           } else {
             message.value = '✖ Falsch. Versuch es nochmal.';
             success.value = false;
@@ -94,6 +95,7 @@
                         inputmode="numeric"
                         variant="outlined"
                         prepend-inner-icon="key"
+                        :style="{ fontSize: '16px' }"
                         @keyup.enter="checkCode"
                       />
 
