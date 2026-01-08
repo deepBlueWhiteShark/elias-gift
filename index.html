@@ -70,9 +70,16 @@
             <v-container class="fill-height" fluid>
               <v-row align="center" justify="center">
                 <v-col cols="12" sm="8" md="4">
+                  <v-img
+                    v-if="success"
+                    src="success.png"
+                    class="mt-6"
+                    max-height="240"
+                    contain
+                  />
                   <v-card elevation="12" elevation="16" class="animate__animated animate__pulse" rounded="xl">
                     <v-card-title class="text-center text-h6">
-                      🔐 Rätselterminal
+                      🔐 Hallo Elia, hast du eine Zahl für mich? 🐐
                     </v-card-title>
 
                     <v-card-text>
