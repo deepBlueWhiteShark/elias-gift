@@ -53,7 +53,7 @@
         const success = ref(false);
 
         function checkCode() {
-          if (code.value.trim().toUpperCase() === '44') {
+          if (code.value === '42') {
             message.value = '✔ Richtig! Nächster Hinweis: Der Finale Code ist näher bei dir, also du denkst … vor allem in der Nacht 🧊';
             success.value = true;
           } else {
@@ -79,6 +79,8 @@
                       <v-text-field
                         v-model="code"
                         label="Code eingeben"
+                        type="number"
+                        inputmode="numeric"
                         variant="outlined"
                         prepend-inner-icon="key"
                         @keyup.enter="checkCode"
