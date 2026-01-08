@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rätsel</title>
+  <title>🐐</title>
 
   <!-- Vue 3 -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
@@ -54,7 +54,6 @@
 
         function checkCode() {
           if (code.value === '42') {
-            message.value = '✔ Richtig! Wen suchst du, wenn dir kalt ist 🧊';
             success.value = true;
           } else {
             message.value = '✖ Falsch. Versuch es nochmal.';
@@ -74,12 +73,16 @@
                     v-if="success"
                     src="success.png"
                     class="mt-6"
-                    max-height="240"
+                    max-height="340"
                     contain
                   />
                   <v-card elevation="12" elevation="16" class="animate__animated animate__pulse" rounded="xl">
-                    <v-card-title class="text-center text-h6">
+                    <v-card-title class="text-center text-h6" v-if="!success">
                       🔐 Hallo Elia 🐐
+                    </v-card-title>
+                    <v-card-title class="text-center text-h6" v-else>
+                      <span>✔ Richtig! Wen oder was suchst du,</span>
+                      <span class="d-block">wenn dir kalt ist? 🧊</span>
                     </v-card-title>
 
                     <v-card-text>
